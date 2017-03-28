@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'main'
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -118,5 +118,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+STATIC_PATH = os.path.join(BASE_DIR,'static')
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # Эта переменная уже определена.
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)

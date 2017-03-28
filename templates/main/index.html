@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+    <head>
+        <title>Кроха</title>
+        <img src="{% static "images/logo.jpg" %}" alt="Logo" />
+    </head>
+
+    <body>
+        <h1>Фоточки и бла-бла-бла</h1>
+
+            {% if Albums %}
+          <ul>
+              {% for album in Albums %}
+              <li>{{ album.name }}
+                 <IMG src="{% static "images/%s" % ({{album.cover }} }}) %}">
+              </li>
+
+              {% endfor %}
+          </ul>
+            {% else %}
+        <strong>There are no categories present.</strong>
+            {% endif %}
+    </body>
+
+</html>
