@@ -25,7 +25,7 @@ SECRET_KEY = '2k)8k0ll+aawi$uug%y3%4^dfnc9cr@p#83-t^abiso24#6g5('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zef.pythonanywhere.com']
 
 
 # Application definition
