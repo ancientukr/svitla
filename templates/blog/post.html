@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+
+    {% if post %}
+
+                <header>
+                    <h2>{{ post.name }}</h2>
+                    <p>{{ post.data }}</p>
+                </header>
+                <section>
+                    <img src="{{ post.cover.url }}">
+                    <p> {{ post.text }}</p>
+                </section>
+            </a>
+
+    {% else %}
+
+post
+    {% endif %}
+
+{% endblock %}

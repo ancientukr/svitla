@@ -1,27 +1,89 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
 {% load staticfiles %}
-<html>
 
-    <head>
-        <title>Кроха</title>
-        <img src="{% static "images/logo.jpg" %}" alt="Logo" />
-    </head>
+{% block body_block %}
 
-    <body>
-        <h1>Фоточки и бла-бла-бла</h1>
+    <!-- Slider -->
+    <div class="slider">
+        <ul class="skdslider">
+            <li>
+            <img src="../../media/media/МК_ПастухМ_1916.jpg" alt="">
+            </li>
+            <li>
+            <img src="../../media/media/КапаЛеша_1132.jpg" alt="">
+            </li>
+            <li>
+            <img src="../../media/media/Настя_8368_Hlrbiq3.jpg" alt="">
+            </li>
+        </ul>
+    </div>
 
-            {% if Albums %}
-          <ul>
-              {% for album in Albums %}
-              <li>{{ album.name }}
-                 <IMG src="{% static "images/%s" % ({{album.cover }} }}) %}">
-              </li>
+      <!-- Quote -->
 
-              {% endfor %}
-          </ul>
-            {% else %}
-        <strong>There are no categories present.</strong>
-            {% endif %}
-    </body>
+    <div class="quote">
+        <p class="quote-text text-center">
+              Если прекрасное не жило бы в нас, как бы мы могли узнать его?
+        </p>
+        <p class="quote-autor text-center "></p>
+    </div>
 
-</html>
+      <!-- Categories -->
+
+    <div class="categories">
+              <div class="container">
+                  <div class="row">
+                      <a href="/categories/Love-Story/">
+                      <div class="categorie ">
+                          <div class="col-md-6">
+                            <div class="thumbnail family-fhoto check">
+                                <img src="../static/images/family.jpg" alt="эскиз">
+                                <div class="caption">
+                                    <h3>Семейное фото</h3>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                      </a>
+                      <a href="/categories/Family-photo/">
+                      <div class="categorie ">
+                          <div class="col-md-6">
+                            <div class="thumbnail love-story check">
+                                <img src="../static/images/LoveStory.jpg" alt="эскиз">
+                                <div class="caption">
+                                    <h3>Love Story</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </a>
+                      <a href="/categories/Wedding/">
+                      <div class="categorie ">
+                         <div class="col-md-6">
+                            <div class="thumbnail wedding check">
+                                <img src="../static/images/wedding.jpg" alt="эскиз">
+                                <div class="caption">
+                                    <h3>Свадьба</h3>
+                                </div>
+                            </div>
+                         </div>
+                      </div>
+                      </a>
+                      <a href="/categories/Portrait/">
+                      <div class="categorie">
+                        <div class="col-md-6">
+                            <div class="thumbnail portr check">
+                                <img src="../static/images/port.jpg" alt="эскиз">
+                                <div class="caption">
+                                    <h3>Портрет</h3>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      </a>
+                  </div>
+              </div>
+    </div>
+
+
+{% endblock %}

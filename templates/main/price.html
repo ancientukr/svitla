@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+
+    <div class="parallax-container" data-parallax="scroll" data-position="-100" data-bleed="10"
+                                    data-natural-width="1000" data-natural-height="600">
+
+        <div class="text-center">~ Цены ~</div>
+    </div>
+
+    <div class="container price-categories">
+            <div class="row">
+                <a href="/price-wedding/">
+                    <div class="col-md-6">
+                            <div class="price-category price-category1">
+                                <div class="text-price">
+                                    <p>СВАДЕБНАЯ СЪЕМКА</p>
+                                </div>
+                            </div>
+                    </div>
+                </a>
+                <a href="/price-portret/">
+                    <div class="col-md-6">
+                            <div class="price-category price-category2">
+                                <div  class="text-price">
+                                    <p>СЕМЕЙНАЯ СЪЕМКА | БЕРЕМЕННОСТЬ</p>
+                                    <p>LOVE STORY</p>
+                                    <p>ПОРТРЕТНАЯ СЪЕМКА | ПОРТФОЛИО</p>
+                                </div>
+                            </div>
+                        </div>
+                </a>
+            </div>
+
+    </div>
+
+{% endblock %}

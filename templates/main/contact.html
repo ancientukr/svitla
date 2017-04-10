@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+
+    <div class="parallax-container" data-parallax="scroll" data-position="-100" data-bleed="10"
+                     data-natural-width="1000" data-natural-height="600">
+                <div class="text-center">~ Контакты ~</div>
+            </div>
+
+
+    <div class="contact">
+      <div class="container">
+                  <div class="row">
+                      <div class="categorie">
+                          <div class="col-md-6">
+                              <p>
+                                  Благодарю за Ваш интерес к моим работам! А теперь, время рассказать подробнее о Вашем предстоящем событии
+                                  (организатор, время, место, стиль и т.д.). Вы всегда можете отправить мне сообщение через Viber,
+                                  СМС или соц.сети. А также через форму для связи ниже на этой странице.
+                                  Так же, я буду рада, если Вы напишете несколько слов о себе, своей паре, о том,
+                                  какой представляете вашу фотосессию и что ожидаете от нее. Не ограничивай себя в описании деталей,
+                                  ведь это частичка того, что сделает ваше событие незабываемым!Спасибо!
+
+                              </p>
+
+                          </div>
+                          <div class="col-md-6 ">
+                            <div class="thumbnail">
+                                <img src="{% static 'images/contact-photo.jpg' %}">
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+      </div>
+    </div>
+
+{% endblock %}

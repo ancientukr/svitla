@@ -1,0 +1,293 @@
+
+
+body {
+    background-color: white;
+    font-family: AvanteNrBook;
+    color: #646969;
+}
+
+
+.logo-text {
+    font-size: 4em;
+    font-family: 'Great Vibes', cursive;
+}
+.logo{
+    text-align: center;
+}
+
+.logo img {
+    height: 10em;
+}
+
+.header .menu {
+    background-color: white;
+    border: none;
+    margin-top: 0px;
+
+}
+
+.header .menu .navbar-nav {
+    float: none;
+    text-align: center;
+
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+.navbar-nav li {
+    float: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+ul {
+    list-style-type:circle ;
+}
+.dropdown-menu {
+    padding: 0px;
+    border: none;
+    background-color: rgba(255,255,255,0);
+}
+
+.dropdown-menu  li{
+    border-bottom: 2px solid transparent;
+    background-color: rgba(255,255,255,0.8);
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.slider {
+    margin-top: 0px;
+    width: 100%;
+    height: 700px;
+}
+
+.photo-header {
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    font-size: 1.5em;
+    color: #646969;
+}
+
+
+
+.parallax-container {
+    min-height: 300px;
+    background: transparent;
+    padding-top: 120px;
+    font-size: 3em;
+    color: white;
+    text-shadow:1px 1px 2px gray;
+
+}
+.parallax-container {
+    min-height: 300px;
+    background: transparent;
+    padding-top: 120px;
+    font-size: 3em;
+    color: white;
+    text-shadow:1px 1px 2px gray;
+
+}
+
+.contact {
+    font-size: 1.2em;
+    margin-top: 4em;
+
+}
+
+.contact img {
+    height: 20em;
+}
+
+.about img {
+    height: 20em;
+
+}
+
+.about {
+    font-size: 1.2em;
+    margin-top: 4em;
+}
+
+
+.categories {
+    margin-top: 3em;
+}
+
+.check {
+   border: none;
+    color: black;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.photo {
+    padding: 4px;
+    margin: 0px;
+}
+
+
+.photo .thumbnail {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.categories .check:hover {
+
+    -webkit-filter: opacity(70%);
+    text-decoration: underline;
+}
+
+
+
+.quote {
+    width: 100%;
+    text-align: center;
+    margin-top: 8em;
+    margin-bottom: 8em;
+    font-size: large;
+    padding: 5em;
+}
+
+.quote .quote-text {
+    font-style: italic;
+    font-size: 2em;
+}
+
+.quote .quote-autor {
+    font-weight: normal;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+}
+
+.footer {
+    margin-top: 3em;
+    border-top: 1px solid lightgrey;
+    padding-top: 3em;
+    margin-bottom: 3em;
+}
+
+.footer .social{
+text-align: center;
+
+    padding-bottom: 25px;
+}
+
+
+.thumbnail {
+    border: none;
+}
+
+.form {
+    margin-top: 4em;
+}
+
+/* FAQ */
+
+.FAQ {
+    margin-top: 5em;
+}
+
+.FAQ .question {
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.FAQ a {
+    color: #646969;
+    text-decoration: underline;
+}
+
+.FAQ a:hover {
+    color: #cd96b7;
+}
+
+/* Price */
+
+.price-categories  {
+    text-align: center;
+    margin-top: 6em;
+}
+
+.price-category1 {
+    background: url("../../media/media/МК_ПастухМ_1916.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    height: 40em;
+    vertical-align: middle;
+    opacity: 0.6;
+}
+
+.price-category2 {
+    background: url("../../media/media/КапаЛеша_1132.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    height: 40em;
+    opacity: 0.6;
+
+}
+.text-price {
+    padding-top: 17em;
+    opacity: 1;
+}
+.price-category1 .text-price {
+    padding-top: 19em;
+}
+
+.price-category p {
+    font-size: 1.4em;
+    color: black;
+
+}
+
+.price-categories a:hover p {
+    color: #cd96b7;
+}
+
+/* Price -wedding */
+
+.pack-prices {
+    margin-top: 4em;
+}
+
+.pack-price {
+
+    margin-bottom: 4em;
+}
+
+
+
+.header-pack {
+    background-color: #cd96b7;
+    text-align: center;
+    font-size: 1.6em;
+    margin-right: 3em;
+    padding: 1.4em;
+    margin-bottom: 1em;
+}
+
+.header-pack p {
+    display: block;
+    margin-top: 1em;
+    border: none;
+}
+
+.pack-price li {
+    font-size: 1.2em;
+    margin-left: 2em;
+    padding-top: 1em;
+    list-style-type: disc;
+}

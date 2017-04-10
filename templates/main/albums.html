@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+
+
+
+
+    {% if photos %}
+    <div class="categories">
+              <div class="container">
+                  <div class="row">
+    {% for photo in photos %}
+        {% if photo.horizontal == False %}
+                      <div class="categorie">
+                          <div class="col-md-6 photo">
+                            <div class="thumbnail photo">
+                                <img src="{{ photo.photo.url  }}" alt="эскиз">
+                            </div>
+                          </div>
+                      </div>
+        {% else %}
+                      <div class="categorie">
+                          <div class="col-md-12 photo">
+                            <div class="thumbnail">
+                                <img src="{{ photo.photo.url  }}" alt="эскиз">
+                            </div>
+                          </div>
+                      </div>
+
+        {% endif %}
+    {% endfor %}
+                  </div>
+              </div>
+        </div>
+    {% else %}
+      <p>Такого альбома не найдено. Попробуйте еще ;)</p>
+    {% endif %}
+
+{% endblock %}

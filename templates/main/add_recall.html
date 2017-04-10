@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+
+    <div class="parallax-container" data-parallax="scroll" data-position="-100" data-bleed="10"
+                     data-natural-width="1000" data-natural-height="600">
+                <div class="text-center">~ Оставить заявку ~</div>
+            </div>
+
+
+     <form id="category_form" method="post" action="/add_recall/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}
+                {{ field }}
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Create Category" />
+        </form>
+
+
+   <!--
+    <div class="form">
+    <form id="recall_form" method="post" action="/add_recall" class="form-horizontal" role="form">
+
+
+        <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Имя</label>
+            <div class="col-sm-3">
+                <input type="text" name="name" id="name" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">E-mail</label>
+            <div class="col-sm-3">
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="type" class="col-sm-3 control-label">Какая съемка Вас интересует?</label>
+            <div class="col-sm-3">
+                <select name="type_photo" id="type" class="form-control">
+                    <option value="Wedding">свадебная</option>
+                    <option value="Pregnancy">беременность</option>
+                    <option value="Family-photo">семейная/детская</option>
+                    <option value="Love-Story">love story</option>
+                    <option value="Other">другая</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="date" class="col-sm-3 control-label">Планируемая дата съемки </label>
+            <div class="col-sm-3">
+                <input type="date" name="date_photo_shooting" id="date" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="location" class="col-sm-3 control-label">Планируемое место съемки </label>
+            <div class="col-sm-3">
+                <input type="text" name="location" id="location" class="form-control">
+            </div>
+        </div>
+         <div class="form-group">
+            <label for="massage" class="col-sm-3 control-label">Сообщение</label>
+            <div class="col-sm-3">
+                <textarea name="massage" id="massage" class="form-control"></textarea>
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="info" class="col-sm-3 control-label">Как Вы обо мне узнали (Google, друзья, соц.сеть и т.д.)? *</label>
+            <div class="col-sm-3">
+                <input type="text" name="info_about_my" id="info" class="form-control">
+            </div>
+         </div>
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-3">
+                <button type="submit" class="btn btn-default">Отправить</button>
+            </div>
+          </div>
+    </form>
+    </div>
+    -->
+{% endblock %}

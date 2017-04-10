@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+ {% load staticfiles %}
+<html lang="en">
+  <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
+       <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" >
+       <link rel="stylesheet" href="http://getbootstrap.com/examples/dashboard/dashboard.css" >
+       <link rel="stylesheet" href="{% static 'skdslider-master/src/css/main.css' %}">
+       <link rel="stylesheet" href="{% static 'boxLoader-Jquery-Plugin-master/css/main.css' %}">
+       <link rel="stylesheet" href="{% static 'boxLoader-Jquery-Plugin-master/css/normalize.css' %}">
+       <link rel="stylesheet" href="{% static 'boxLoader-Jquery-Plugin-master/fonts/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font.css' %}">
+
+
+
+  </head>
+  <body>
+
+   <!-- Header -->
+    <header class="header">
+      <section>
+
+          <!-- Logo -->
+
+          <div class="logo">
+                <a href="/"><img src="{% static 'images/logo.png' %}"></a>
+          </div>
+
+          <!-- Menu -->
+
+        <div class="container">
+          <nav class="navbar navbar-default menu" role="navigation">
+              <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav nav-menu">
+                            <li class="dropdown">
+                                <a href="/" class="dropdown-toggle" data-toggle="dropdown">Портфолио</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/categories/Wedding/">Свадебное фото</a></li>
+                                    <li><a href="/categories/Love-Story/">Love Story</a></li>
+                                    <li><a href="/categories/Portrait/">Портрет</a></li>
+                                    <li><a href="/categories/Family-photo/">Семейное</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/blog/">Блог</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="/info/">Инфо</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/FAQ/">FAQ</a></li>
+                                    <li><a href="/price/">Цены</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/about/">Об авторе</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="/contact/">Контакты</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/contact/">Контакты</a></li>
+                                    <li><a href="/add_recall/">Оставить заявку</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+              </div>
+          </nav>
+        </div>
+
+      </section>
+    </header>
+
+   <!-- Site content -->
+    <section class="site-content">
+        {% block body_block %}{% endblock %}
+    </section>
+
+
+   <!-- Footer-->
+    <footer class="footer">
+        <div class="social">
+            <p>follow me on</p>
+          <a href="https://www.instagram.com/svitla_photo/"><img src="{% static 'images/i.png' %}"></a>
+          <a href="https://vk.com/svitla_photo"><img src="{% static 'images/vk.png' %}"></a>
+          <a href="https://www.facebook.com/svitla.photo"><img src="{% static 'images/f.png' %}"></a>
+          <a href="https://mywed.com/en/photographer/svitla/"><img src="{% static 'images/mv.png' %}"></a>
+        </div>
+      <div class="jumbotron">
+          <div class="logo">
+          <div class="logo-text">
+                  Julia Svitla
+              </div>
+          </div>
+          <p class="text-center">juliya@gmail.com</p>
+          <p class="text-center">+38(095)85-58-186</p>
+
+      </div>
+
+    </footer>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+       <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+       <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+       <script src="{% static 'skdslider-master/src/js/skdslider.js' %}"></script>
+       <script src="{% static 'skdslider-master/src/js/main.js' %}"></script>
+       <script src="{% static 'boxLoader-Jquery-Plugin-master/js/main.js' %}"></script>
+       <script src="{% static 'boxLoader-Jquery-Plugin-master/js/jquery.boxloader.min.js' %}"></script>
+       <script src="{% static 'js/parallax.js' %}"></script>
+       <script src="{% static 'js/parallax_main.js' %}"></script>
+  </body>
+</html>
