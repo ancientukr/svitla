@@ -2,6 +2,8 @@ import os
 
 from django.db import models
 
+
+# -*- coding: utf-8 -*-
 class Album(models.Model):
 
     CATEGORIES_PHOTO_ALBUM = (
