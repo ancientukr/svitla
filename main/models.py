@@ -34,7 +34,7 @@ class Album(models.Model):
 class Foto(models.Model):
 
     album = models.ForeignKey(Album)
-    photo = models.ImageField(upload_to="media")
+    photo = models.ImageField(upload_to=self.album.name)
     horizontal = models.BooleanField(default=False)
 
     def __str__ (self):
@@ -58,5 +58,8 @@ class Recall(models.Model):
 
     def __str__(self):
         return self.name
+
+class SliderPhoto(models.Model):
+    photo = models.ImageField(upload_to='slider')
 
 

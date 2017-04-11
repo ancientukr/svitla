@@ -5,7 +5,6 @@
 {% block body_block %}
 
     {% if album %}
-        {% if  album.count > 1 %}
             <div class="parallax-container" data-parallax="scroll" data-position="-100" data-bleed="10"
                      data-natural-width="1000" data-natural-height="600">
                 <div class="text-center">~ {{ title }} ~</div>
@@ -31,39 +30,6 @@
                   </div>
               </div>
         </div>
-            {% else %}
-             {% if album %}
-        <div class="jumbotron">
-            <p> Название альбома {{ album.name }}</p>
-            <p> Дата {{ album.data }}</p>
-            <p> Локация {{ album.location }}</p>
-        </div>
-        <div class="text-center container">
-            <div class="text-info">{{ album.description }}</div>
-        </div>
-                 {% if photos %}
-    <div class="categories">
-              <div class="container">
-                  <div class="row">
-    {% for photo in photos %}
-                      <div class="categorie">
-                          <div class="col-md-6">
-                            <div class="thumbnail">
-                                <img src="{{ photo.photo.url  }}" alt="эскиз">
-                            </div>
-                          </div>
-                      </div>
-    {% endfor %}
-                  </div>
-              </div>
-        </div>
-    {% else %}
-      <p>Такого альбома не найдено. Попробуйте еще ;)</p>
-    {% endif %}
-
-    {% endif %}
-
-            {% endif %}
     {% else %}
       <p>Такой категории не найдено. Попробуйте еще ;)</p>
     {% endif %}
