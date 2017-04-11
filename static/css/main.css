@@ -1,4 +1,6 @@
-
+img {
+    pointer-events: none;
+}
 
 body {
     background-color: white;
@@ -67,7 +69,7 @@ ul {
 .slider {
     margin-top: 0px;
     width: 100%;
-    height: 700px;
+    height: 45em;
 }
 
 .photo-header {
@@ -80,23 +82,15 @@ ul {
 
 
 .parallax-container {
-    min-height: 300px;
+    min-height: 7em;
     background: transparent;
-    padding-top: 120px;
+    padding-top: 2.5em;
     font-size: 3em;
     color: white;
     text-shadow:1px 1px 2px gray;
 
 }
-.parallax-container {
-    min-height: 300px;
-    background: transparent;
-    padding-top: 120px;
-    font-size: 3em;
-    color: white;
-    text-shadow:1px 1px 2px gray;
 
-}
 
 .contact {
     font-size: 1.2em;
@@ -125,13 +119,26 @@ ul {
 
 .check {
    border: none;
-    color: black;
+    color: #646969;
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
        -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
           transition: all 1s ease;
 }
+
+.categories .check:hover {
+
+    -webkit-filter: opacity(70%);
+    text-decoration: underline;
+    color: #cd96b7;
+}
+
+.categories .check:hover h3{
+
+    color: #cd96b7;
+}
+
 
 .photo {
     padding: 4px;
@@ -146,11 +153,6 @@ ul {
 
 
 
-.categories .check:hover {
-
-    -webkit-filter: opacity(70%);
-    text-decoration: underline;
-}
 
 
 
@@ -184,7 +186,7 @@ ul {
 .footer .social{
 text-align: center;
 
-    padding-bottom: 25px;
+    padding-bottom: 1em;
 }
 
 
@@ -195,6 +197,33 @@ text-align: center;
 .form {
     margin-top: 4em;
 }
+
+.button_ton {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    z-index: 99999;
+    background: url("../images/go-to-top-icon.png") no-repeat center;
+    height: 2.5em;
+    width: 2.5em;
+    background-size: contain;
+}
+
+/* index */
+
+.categories h3 {
+    color: #646969;
+}
+
+.footer p {
+    font-size: 1.4em;
+}
+
+footer img {
+    height: 2.5em;
+
+}
+
 
 /* FAQ */
 
@@ -225,7 +254,7 @@ text-align: center;
 }
 
 .price-category1 {
-    background: url("../../media/media/МК_ПастухМ_1916.jpg") no-repeat 50% 50%;
+    background: url("../../media/photo/МК_ПастухМ_2027.jpg") no-repeat 50% 50%;
     background-size: cover;
     height: 40em;
     vertical-align: middle;
@@ -233,7 +262,7 @@ text-align: center;
 }
 
 .price-category2 {
-    background: url("../../media/media/КапаЛеша_1132.jpg") no-repeat 50% 50%;
+    background: url("../../media/photo/МК_ПастухМ_2027.jpg") no-repeat 50% 50%;
     background-size: cover;
     height: 40em;
     opacity: 0.6;
@@ -290,4 +319,15 @@ text-align: center;
     margin-left: 2em;
     padding-top: 1em;
     list-style-type: disc;
+}
+
+/* about */
+
+.about a {
+    color: #646969;
+    text-decoration: underline;
+}
+
+.about a:hover {
+    color: #cd96b7;
 }
