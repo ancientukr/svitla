@@ -14,6 +14,10 @@ class Album(models.Model):
     )
     #image_save_url = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),"static/images/album_cover")
 
+
+
+
+
     name = models.CharField(max_length=128, unique=True)
     description = models.CharField(max_length=500)
     data = models.DateField(auto_now=True)
@@ -44,14 +48,15 @@ class Recall(models.Model):
         ("Love-Story", "love story"),
         ("Other", "другая")
     )
-
     name = models.CharField(max_length=30)
     email = models.EmailField()
     social = models.URLField()
     type_photo = models.CharField(max_length=20, choices=CATEGORIES_PHOTO_TYPE, default='свадебная')
-    date_photo_shooting = models.DateField()
     location = models.CharField(max_length=30)
     massage = models.CharField(max_length=1000)
     info_about_my = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from main.models import Album, Foto
 from  main.forms import RecallForm
+from django.http import HttpResponse
 
 context_dict = {}
 foto_dict = {}
@@ -38,12 +39,12 @@ def albums(request, album_id):
     return render(request, 'main/albums.html', foto_dict)
 
 def add_recall(request):
-    if request.method == 'Post':
+    if request.method == 'POST':
         form = RecallForm(request.POST)
 
         if form.is_valid():
-            form.save(commit=True)
-            return contact(request)
+            form.save()
+            return HttpResponse('ok')
         else:
             print(form.errors)
     else:
