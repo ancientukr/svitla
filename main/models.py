@@ -24,7 +24,7 @@ class Album(models.Model):
 
     location = models.CharField(max_length=100)
     categories = models.CharField(max_length=20, choices=CATEGORIES_PHOTO_ALBUM, default="Свадьба")
-    cover = models.ImageField(upload_to="media")
+    cover = models.ImageField(upload_to="photo/cover")
 
     def __str__ (self):
         return self.name
@@ -34,7 +34,7 @@ class Album(models.Model):
 class Foto(models.Model):
 
     album = models.ForeignKey(Album)
-    photo = models.ImageField(upload_to=self.album.name)
+    photo = models.ImageField(upload_to="photo")
     horizontal = models.BooleanField(default=False)
 
     def __str__ (self):

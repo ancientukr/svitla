@@ -5,19 +5,17 @@
 {% block body_block %}
 
     <!-- Slider -->
+    {% if slides %}
     <div class="slider">
         <ul class="skdslider">
+            {% for slide in slides %}
             <li>
-            <img src="../../media/media/МК_ПастухМ_1916.jpg" alt="">
+            <img src="{{ slide.photo.url }}" alt="">
             </li>
-            <li>
-            <img src="../../media/media/КапаЛеша_1132.jpg" alt="">
-            </li>
-            <li>
-            <img src="../../media/media/Настя_8368_Hlrbiq3.jpg" alt="">
-            </li>
+            {% endfor %}
         </ul>
     </div>
+    {% endif %}
 
       <!-- Quote -->
 

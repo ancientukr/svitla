@@ -1,13 +1,16 @@
 from django.shortcuts import render
-from main.models import Album, Foto
+from main.models import Album, Foto, SliderPhoto
 from  main.forms import RecallForm
 from django.http import HttpResponse
 
 context_dict = {}
 foto_dict = {}
+slider_context = {}
 
 def index(request):
-    return render(request, 'main/index.html')
+    slide_list = SliderPhoto.objects.filter()
+    slider_context["slides"] = slide_list
+    return render(request, 'main/index.html', slider_context)
 
 def info(request):
     return render(request,'main/info.html')
