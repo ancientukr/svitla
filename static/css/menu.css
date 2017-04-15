@@ -1,0 +1,148 @@
+
+
+
+/* RESET STYLES */
+
+.mainWrap{
+	width: auto;
+	margin:auto;
+	font-family: AvanteNrBook;
+	font-weight: lighter;
+}
+
+nav{
+	display:block;
+	background:white;
+	text-align: center;
+}
+.menu{
+	display:block;
+	font-size: 1.4em;
+}
+
+.menu li{
+	display: inline-block;
+	position: relative;
+	z-index:100;
+	margin-left: 1.3em;
+}
+.menu li a {
+	text-decoration:none;
+	padding:0.3em;
+	display:block;
+	color:#646969;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	-moz-transition: all 0.2s ease-in-out 0s;
+	-o-transition: all 0.2s ease-in-out 0s;
+	-ms-transition: all 0.2s ease-in-out 0s;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+.menu li a:hover, 
+.menu li:hover > a{
+	color:#cd96b7;
+}
+
+.menu ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 7em;
+	position: absolute;
+	background: rgba(255,255,255,0);
+}
+
+.menu ul li {
+	display:block;
+	float: none;
+	background:rgba(255,255,255,0);
+	margin-top:2px;
+	padding:0;
+	margin-left: 0;
+
+}
+.menu ul li a {
+	font-size:0.7em;
+	font-weight:normal;
+	display:block;
+	color:#646969;
+	background:rgba(255,255,255,0.8);
+}
+.menu ul li a:hover, .menu ul li:hover > a{
+	background-color: white;
+	color:#cd96b7;
+}
+.menu li:hover > ul{
+	display: block;
+}
+
+.mobile-menu{
+	display:none;
+	width: 3.15em;
+	margin-left: 80%;
+	margin-bottom: 2em;
+}
+
+.icon-reorder{
+	display: block;
+	height: 3em;
+	width: 3em;
+	background: url("../images/burgerIcon.png") no-repeat center;
+	background-size: contain;
+	opacity: 0.5;
+
+}
+
+.mobile-menu:hover{
+
+	opacity: 0.4;
+
+}
+
+
+@media (max-width: 760px) {
+
+	.mainWrap{
+		width:auto;
+	}
+	.menu{
+		display:none;
+	}
+	.mobile-menu{
+		display:block;
+	}
+	nav{
+		margin:0;
+		background:none;
+		text-align: left;
+	}
+	.menu li{
+		display:block;
+		margin:0;
+	}
+	.menu li a {
+		background:#ffffff;
+		color:#646969;
+
+	}
+	.menu li a:hover, .menu li:hover > a{
+		background:#f0f0f0;
+		color:#cd96b7;
+	}
+	.menu ul {
+		display:block;
+		position:relative;
+		top:0;
+		left:2%;
+		width:100%;
+	}
+	.menu ul ul {
+		left:0;
+	}
+
+
+}
+
+@media (max-width: 480px) {}
+@media (max-width: 320px) {}
+

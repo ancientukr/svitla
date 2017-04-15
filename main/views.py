@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from mongoengine import DoesNotExist
+
 from main.models import Album, Foto, SliderPhoto
 from  main.forms import RecallForm
 from django.http import HttpResponse
@@ -6,6 +8,7 @@ from django.http import HttpResponse
 context_dict = {}
 foto_dict = {}
 slider_context = {}
+album_id = 0
 
 def index(request):
     slide_list = SliderPhoto.objects.filter()
@@ -30,8 +33,6 @@ def price(request):
 def categories(request, type_foto):
     album_list = Album.objects.filter(categories=type_foto)
     context_dict['album'] = album_list
-    if album_list.count() == 1:
-        context_dict['photos'] = Foto.objects.filter(album=album_list)
     context_dict['title'] = album_list[0].categories
     return render(request, 'main/categories.html', context_dict)
 
@@ -39,6 +40,17 @@ def albums(request, album_id):
     album = Album.objects.get(id=album_id)
     foto_dict['photos'] = Foto.objects.filter(album= album)
     foto_dict['album_info'] = album
+
+    try:
+        foto_dict['next'] = Album.objects.get(id=album_id).get_next_by_data().id
+    except Exception:
+        foto_dict['next']= 0
+
+    try:
+        foto_dict['previous'] = Album.objects.get(id=album_id).get_previous_by_data().id
+    except Exception:
+        foto_dict['previous'] = 0
+
     return render(request, 'main/albums.html', foto_dict)
 
 def add_recall(request):
@@ -49,7 +61,7 @@ def add_recall(request):
             form.save()
             return HttpResponse('ok')
         else:
-            print(form.errors)
+            return HttpResponse('not ok')
     else:
         form = RecallForm()
 
@@ -60,5 +72,11 @@ def price_wedding(request):
 
 def price_portret(request):
     return render(request, 'main/price-portret.html')
+
+def nex_page(request):
+    album = Album.objects.get(id=album_id).get_next_by_data()
+    foto_dict['photos'] = Foto.objects.filter(album=album)
+    foto_dict['album_info'] = album
+    return render(request, 'main/albums.html', foto_dict)
 
 

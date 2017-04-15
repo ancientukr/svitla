@@ -1,5 +1,6 @@
 import os
 
+from datetime import date
 from django.db import models
 
 
@@ -54,6 +55,7 @@ class Recall(models.Model):
     type_photo = models.CharField(max_length=20, choices=CATEGORIES_PHOTO_TYPE, default='свадебная')
     location = models.CharField(max_length=30)
     massage = models.CharField(max_length=1000)
+    date_photo_shooting = models.DateField()
     info_about_my = models.CharField(max_length=50)
 
     def __str__(self):

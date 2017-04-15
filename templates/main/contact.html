@@ -1,17 +1,14 @@
-{% extends "base.html" %}
+{% extends "base_no_index.html" %}
 
 {% load staticfiles %}
 
-{% block body_block %}
+{% block body_block_no_index %}
 
-    <div class="parallax-container" data-parallax="scroll" data-position="-100" data-bleed="10"
-                     data-natural-width="1000" data-natural-height="600">
-                <div class="text-center">~ Контакты ~</div>
-            </div>
+
 
 
     <div class="contact">
-      <div class="container">
+            <div class="container">
                   <div class="row">
                       <div class="categorie">
                           <div class="col-md-6">
@@ -33,7 +30,8 @@
                           </div>
                       </div>
                   </div>
-      </div>
+            </div>
     </div>
+
 
 {% endblock %}

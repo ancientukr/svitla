@@ -97,7 +97,7 @@ body {
     opacity: 0.7;
     filter: alpha(opacity=80); }
   .skdslider a.play {
-    background: url("../img/play.png") no-repeat scroll center center transparent;
+
     width: 35px;
     height: 35px;
     display: none;
@@ -107,7 +107,7 @@ body {
     left: 48%;
     margin-top: -17px; }
   .skdslider a.pause {
-    background: url("../img/pause.png") no-repeat scroll center center transparent;
+
     width: 35px;
     height: 35px;
     display: none;

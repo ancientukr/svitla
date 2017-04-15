@@ -1,13 +1,11 @@
-{% extends "base.html" %}
+{% extends "base_no_index.html" %}
 
 {% load staticfiles %}
 
-{% block body_block %}
-
-
-
+{% block body_block_no_index %}
 
     {% if photos %}
+
     <div class="categories">
               <div class="container">
                   <div class="row">
@@ -38,8 +36,20 @@
       <p>Такого альбома не найдено. Попробуйте еще ;)</p>
     {% endif %}
 
-      <a href="#top">
+
    <div class="button_ton">
    </div>
+
+    <div class="next-page">
+    {% if next %}
+         <a href="/categories/{{ album_info.categories }}/{{ next }}/"><< Предыдущий альбом</a>
+    {% endif %}
+
+
+      {% if previous %}
+          <a href="/categories/{{ album_info.categories }}/{{ previous }}/">Следующи альбом >></a>
+    {% endif %}
+
+    </div>
 
 {% endblock %}
