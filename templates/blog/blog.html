@@ -1,15 +1,13 @@
-{% extends "base_no_index.html" %}
+{% extends "base.html" %}
 
 {% load staticfiles %}
 
-{% block body_block_no_index %}
+{% block body_block %}
 
     {% if posts %}
         <div class="container blog">
             <div class="row">
-
                 {% for post in posts %}
-
                      <a href="/categories//">
                      <div class="post-preview" >
                       <div class="cover">

@@ -3,24 +3,20 @@
  {% load staticfiles %}
 <html lang="en">
   <head>
-       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
        <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" >
        <link rel="stylesheet" href="http://getbootstrap.com/examples/dashboard/dashboard.css" >
       <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i|Fira+Sans+Condensed:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i|Old+Standard+TT:400,400i,700|Philosopher:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-       <link rel="stylesheet" href="{% static 'skdslider-master/src/css/main.css' %}">
+      <link href="https://fonts.googleapis.com/css?family=Poiret+One|Questrial|Varela&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+      <link rel="stylesheet" href="{% static 'skdslider-master/src/css/main.css' %}">
        <link rel="stylesheet" href="{% static 'boxLoader-Jquery-Plugin-master/css/main.css' %}">
        <link rel="stylesheet" href="{% static 'boxLoader-Jquery-Plugin-master/css/normalize.css' %}">
        <link rel="stylesheet" href="{% static 'boxLoader-Jquery-Plugin-master/fonts/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
         <link rel="stylesheet" href="{% static 'css/font.css' %}">
         <link rel="stylesheet" href="{% static 'css/menu.css' %}">
-
-
-
-
   </head>
   <body>
    <!-- Header -->
@@ -35,29 +31,29 @@
 		        <nav>
 			        <ul class="menu">
 				        <li>
-					        <a href=""><i class="icon-home"></i>Портфолио</a>
+					        <a href=""><i class="icon-home"></i>PORTFOLIO</a>
 					        <ul class="sub-menu">
-						        <li><a href="/categories/Wedding/">Свадебное фото</a></li>
-						        <li><a href="/categories/Love-Story/">Love Story</a></li>
-						        <li><a href="/categories/Family-photo/">Семейное</a></li>
-						        <li><a href="/categories/Portrait/">Портрет</a></li>
+						        <li><a href="/categories/Wedding/">Wedding</a></li>
+						        <li><a href="/categories/Love-Story/">Love story</a></li>
+						        <li><a href="/categories/Family-photo/">Family</a></li>
+						        <li><a href="/categories/Portrait/">Portret</a></li>
 					        </ul>
 				        </li>
 				        <li>
-					        <a  href="{% url 'main:about' %}"><i class="icon-user"></i>Об авторе</a>
+					        <a  href="{% url 'main:about' %}"><i class="icon-user"></i>ABOUT</a>
 				        </li>
 				        <li>
-					        <a  href="{% url 'blog:blog' %}"><i class="icon-camera"></i>Блог</a>
+					        <a  href="{% url 'blog:blog' %}"><i class="icon-camera"></i>BLOG</a>
 				        </li>
 				        <li>
-					        <a  href="#"><i class="icon-bullhorn"></i>Инфо</a>
+					        <a  href="#"><i class="icon-bullhorn"></i>INFO</a>
                             <ul class="sub-menu">
-						        <li><a href="{% url 'main:price' %}">Цены</a></li>
+						        <li><a href="{% url 'main:price' %}">Price</a></li>
 						        <li><a href="{% url 'main:faq' %}">FAQ</a></li>
                             </ul>
 				        </li>
 				        <li>
-					        <a  href="#"><i class="icon-envelope-alt"></i>Контакты</a>
+					        <a  href="#"><i class="icon-envelope-alt"></i>CONTACT</a>
                             <ul class="sub-menu">
 						        <li><a href="{% url 'main:contact' %}">Контакты</a></li>
 						        <li><a href="{% url 'main:add_reall' %}">Оставить заявку</a></li>
@@ -92,12 +88,14 @@
             </div>
         </div>
     </footer>
+      <div class="button_ton" id="top">
+   </div>
+
 
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
        <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-
        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
        <script src="{% static 'skdslider-master/src/js/skdslider.js' %}"></script>
        <script src="{% static 'skdslider-master/src/js/main.js' %}"></script>
@@ -108,5 +106,6 @@
        <script src="{% static 'js/toch.js' %}"></script>
        <script src="{% static 'js/menu.js' %}"></script>
        <script src="{% static 'js/main.js' %}"></script>
+       <script src="{% static 'js/button _top.js' %}"></script>
   </body>
 </html>

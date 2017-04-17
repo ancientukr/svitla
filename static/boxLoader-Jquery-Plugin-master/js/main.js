@@ -1,34 +1,6 @@
 $(document).ready(function(){
 
-	$(".family-fhoto").boxLoader({
-	    direction:"x",
-	    position: "-50%",
-	    effect: "fadeIn",
-	    duration: "2s",
-	    windowarea: "100%"
-});
-		$(".love-story").boxLoader({
-	    direction:"x",
-	    position: "50%",
-	    effect: "fadeIn",
-	    duration: "2s",
-	    windowarea: "100%"
-});
-	    $(".wedding").boxLoader({
-	    direction:"x",
-	    position: "-50%",
-	    effect: "fadeIn",
-	    duration: "2s",
-	    windowarea: "100%"
-});
-	    $(".portr").boxLoader({
-	    direction:"x",
-	    position: "50%",
-	    effect: "fadeIn",
-	    duration: "2s",
-	    windowarea: "100%"
-});
-	    $(".quote").boxLoader({
+	$(".animation-photo").boxLoader({
 	    direction:"y",
 	    position: "50%",
 	    effect: "fadeIn",

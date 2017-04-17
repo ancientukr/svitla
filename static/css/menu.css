@@ -6,8 +6,13 @@
 .mainWrap{
 	width: auto;
 	margin:auto;
-	font-family: AvanteNrBook;
-	font-weight: lighter;
+	font-family: 'Questrial', sans-serif;
+	letter-spacing: 0.15em;
+
+	/* font-family: AvanteNrBook;
+	font-family: 'Poiret One', cursive;
+	font-family: 'Questrial', sans-serif;
+    font-family: 'Varela', sans-serif; */
 }
 
 nav{
@@ -17,14 +22,15 @@ nav{
 }
 .menu{
 	display:block;
-	font-size: 1.4em;
+	font-size: 1.1em;
+
 }
 
 .menu li{
 	display: inline-block;
 	position: relative;
 	z-index:100;
-	margin-left: 1.3em;
+	margin-left: 3em;
 }
 .menu li a {
 	text-decoration:none;
@@ -62,7 +68,7 @@ nav{
 
 }
 .menu ul li a {
-	font-size:0.7em;
+	font-size:0.9em;
 	font-weight:normal;
 	display:block;
 	color:#646969;
@@ -79,7 +85,7 @@ nav{
 .mobile-menu{
 	display:none;
 	width: 3.15em;
-	margin-left: 80%;
+
 	margin-bottom: 2em;
 }
 
@@ -110,6 +116,7 @@ nav{
 	}
 	.mobile-menu{
 		display:block;
+		margin-left: 90%;
 	}
 	nav{
 		margin:0;

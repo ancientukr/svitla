@@ -1,12 +1,13 @@
-{% extends "base_no_index.html" %}
+{% extends "base.html" %}
 
 {% load staticfiles %}
 
-{% block body_block_no_index %}
+{% block body_block %}
 
-
-
-
+    <div class="parallax-container" data-parallax="scroll" data-position="-200" data-bleed="10"
+                     data-natural-width="1000" data-natural-height="600">
+                <p class="text-center">~ Contact ~</p>
+    </div>
     <div class="contact">
             <div class="container">
                   <div class="row">
@@ -19,9 +20,7 @@
                                   Так же, я буду рада, если Вы напишете несколько слов о себе, своей паре, о том,
                                   какой представляете вашу фотосессию и что ожидаете от нее. Не ограничивай себя в описании деталей,
                                   ведь это частичка того, что сделает ваше событие незабываемым!Спасибо!
-
                               </p>
-
                           </div>
                           <div class="col-md-6 ">
                             <div class="thumbnail">
@@ -32,6 +31,4 @@
                   </div>
             </div>
     </div>
-
-
 {% endblock %}

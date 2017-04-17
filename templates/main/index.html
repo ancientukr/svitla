@@ -3,7 +3,6 @@
 {% load staticfiles %}
 
 {% block body_block %}
-
     <!-- Slider -->
     {% if slides %}
     <div class="slider">
@@ -20,10 +19,13 @@
       <!-- Quote -->
 
     <div class="quote">
-        <p class="quote-text text-center">
-              Если прекрасное не жило бы в нас, как бы мы могли узнать его?
+    <blockquote>
+        <p class="quote-text">
+              In every person there are bits of beauty, just need to know how to find and collect them
+            together to show the whole world. For this I chose a photo. The magic of this process fascinates.
         </p>
-        <p class="quote-autor text-center "></p>
+        <cite><p class="quote-autor text-right"> Julia Svitla</p></cite>
+    </blockquote>
     </div>
 
       <!-- Categories -->
@@ -32,52 +34,44 @@
               <div class="container">
                   <div class="row">
                       <a href="/categories/Family-photo/">
-                      <div class="categorie ">
-                          <div class="col-md-6">
-                            <div class="thumbnail family-fhoto check">
+                          <div class="col-md-3 categorie">
+                            <div class="thumbnail animation-photo check">
                                 <img src="../static/images/family.jpg" alt="эскиз">
-                                <div class="caption">
+                                <div class="caption text-center">
                                     <h3>Семейное фото</h3>
                                 </div>
                             </div>
                           </div>
-                      </div>
                       </a>
                       <a href="/categories/Love-Story/">
-                      <div class="categorie ">
-                          <div class="col-md-6">
-                            <div class="thumbnail love-story check">
+                          <div class="col-md-3 categorie">
+                            <div class="thumbnail check animation-photo">
                                 <img src="../static/images/LoveStory.jpg" alt="эскиз">
-                                <div class="caption">
+                                <div class="caption text-center">
                                     <h3>Love Story</h3>
                                 </div>
                             </div>
                         </div>
-                      </div>
                       </a>
                       <a href="/categories/Wedding/">
-                      <div class="categorie ">
-                         <div class="col-md-6">
-                            <div class="thumbnail wedding check">
+                         <div class="col-md-3 categorie">
+                            <div class="thumbnail check animation-photo">
                                 <img src="../static/images/wedding.jpg" alt="эскиз">
-                                <div class="caption">
+                                <div class="caption text-center">
                                     <h3>Свадьба</h3>
                                 </div>
                             </div>
                          </div>
-                      </div>
                       </a>
                       <a href="/categories/Portrait/">
-                      <div class="categorie">
-                        <div class="col-md-6">
-                            <div class="thumbnail portr check">
+                        <div class="col-md-3 categorie ">
+                            <div class="thumbnail check animation-photo">
                                 <img src="../static/images/port.jpg" alt="эскиз">
-                                <div class="caption">
+                                <div class="caption text-center">
                                     <h3>Портрет</h3>
                                 </div>
                             </div>
                         </div>
-                      </div>
                       </a>
                   </div>
               </div>
