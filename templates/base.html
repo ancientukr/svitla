@@ -43,9 +43,6 @@
 					        <a  href="{% url 'main:about' %}"><i class="icon-user"></i>ABOUT</a>
 				        </li>
 				        <li>
-					        <a  href="{% url 'blog:blog' %}"><i class="icon-camera"></i>BLOG</a>
-				        </li>
-				        <li>
 					        <a  href="#"><i class="icon-bullhorn"></i>INFO</a>
                             <ul class="sub-menu">
 						        <li><a href="{% url 'main:price' %}">Price</a></li>
@@ -53,20 +50,16 @@
                             </ul>
 				        </li>
 				        <li>
-					        <a  href="#"><i class="icon-envelope-alt"></i>CONTACT</a>
-                            <ul class="sub-menu">
-						        <li><a href="{% url 'main:contact' %}">Контакты</a></li>
-						        <li><a href="{% url 'main:add_reall' %}">Оставить заявку</a></li>
-					        </ul>
+					        <a  href="{% url 'main:add_reall' %}"><i class="icon-envelope-alt"></i>CONTACT</a>
 				        </li>
 			        </ul>
 		        </nav>
           </div><!--end mainWrap-->
     </header>
    <!-- Site content -->
-    <section class="site-content">
+
         {% block body_block %}{% endblock %}
-    </section>
+
    <!-- Footer-->
     <footer class="footer">
         <div class="container">

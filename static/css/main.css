@@ -13,13 +13,52 @@ body {
     color: #646969;
     padding: 0;
 }
-.parallax-container {
-    min-height: 22vh;
+
+/* parralax */
+
+cont {
+  max-width: 30vh;
+  margin: 0 auto;
+}
+
+
+section.section.cont {
+  padding: 40px 0;
+}
+section.section.parallax {
+  height: 20vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section.section.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  line-height: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.section.parallax-1 {
+  background-image: url("../images/parallax_back.jpg");
+}
+
+@media all and (min-width: 600px) {
+  section.section h2 {
+    font-size: 1em;
+  }
+  section.section p {
+    font-size: 20px;
+  }
+  section.section.parallax h1 {
+    font-size: 2em;
+  }
+}
+@media all and (min-width: 960px) {
+  section.section.parallax h1 {
     font-size: 3em;
-    padding-top: 1.5em;
-    color: white;
-    text-shadow:1px 1px 2px gray;
-    margin-top: 0.5em;
+  }
 }
 
 /* base */
@@ -50,7 +89,6 @@ body {
     text-align: center;
     margin-top: 2em;
     margin-bottom: 1em;
-    display: none;
 }
 .logo .logo-img {
     background: url("../images/logo.png") no-repeat center;
@@ -59,13 +97,13 @@ body {
     background-size: contain;
 }
 .mainWrap {
-    display: none;
+
 }
 .slider {
     margin-top: 0;
     width: 100%;
     height: 70vh;
-    display: none;
+
 }
 .social a:hover{
     opacity: 0.6;
@@ -125,7 +163,7 @@ footer img {
     margin-top: 3em;
     width: auto;
 }
-.categories img {
+.animation-photo img {
     background-size: contain;
     border-radius: 50%;
 }
@@ -223,13 +261,14 @@ footer img {
     font-size: 1.6em;
     margin-right: 1em;
     padding: 1.4em;
-
+    opacity: 0.7;
     margin-bottom: 1em;
 }
 .header-pack p {
     display: block;
     margin-top: 1em;
     border: none;
+    opacity: 1;
 }
 .pack-price li {
     font-size: 1.2em;
@@ -275,32 +314,64 @@ footer img {
 .contact {
     font-size: 1.2em;
     margin-top: 4em;
+    padding: 0 23%;
 }
-.contact img {
-    height: 20em;
-}
+
 .form-recall{
     margin-top: 4em;
 }
-.form-recall .form-img {
+.form-recall input {
+    border-radius: 0;
+}
+.form-recall textarea{
+    border-radius: 0;
+}
+.form-recall button{
+    border-radius: 0;
+}
+.form-recall select{
+    border-radius: 0;
+}
+.form-img {
     background: url("../images/form_img.jpg") no-repeat center;
     background-size: contain;
-    min-height: 40em;
+    min-height: 50em;
+}
+.form-recall button {
+    width: 70%;
+    margin-top: 1em;
+}
+.form-recall .form-group:last-child {
+    text-align: center;
 }
 .errors {
     color: red;
+}
+.form-valid {
+    margin: 5em 0;
 }
 
 /* blog */
 .blog {
     margin-top: 4em;
+
 }
 .blog .post-preview {
-    display: inline-block;
+
+    background-color: silver;
+
 }
-.blog .discr {
-    border: 1px solid;
+.blog  .cover {
+    height: 15em;
+    width: 15em;
+    background-color: red;
 }
+.blog .description {
+    height: 15em;
+    width: 15em;
+    background-color: blue;
+}
+
 
 /* media */
 @media (max-width: 760px) {

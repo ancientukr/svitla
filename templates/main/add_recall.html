@@ -1,96 +1,97 @@
-{% extends "base.html" %}
+{% extends "main/contact.html" %}
 
 {% load staticfiles %}
 
-{% block body_block %}
+{% block form_block %}
+        <div class="contact">
 
-     <div class="parallax-container" data-parallax="scroll" data-position="-200" data-bleed="10"
-                     data-natural-width="1000" data-natural-height="600">
-                <p class="page">1</p>
 
+                <p class="text-center">
+                                  Благодарю за Ваш интерес к моим работам! А теперь, время рассказать подробнее о Вашем предстоящем событии
+                                  (организатор, время, место, стиль и т.д.). Вы всегда можете отправить мне сообщение через Viber,
+                                  СМС или соц.сети. А также через форму для связи ниже на этой странице.
+                                  Так же, я буду рада, если Вы напишете несколько слов о себе, своей паре, о том,
+                                  какой представляете вашу фотосессию и что ожидаете от нее. Не ограничивай себя в описании деталей,
+                                  ведь это частичка того, что сделает ваше событие незабываемым!Спасибо!
+                </p>
+    </div>
     <div class="form-recall form">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="form-img">
-                    </div>
+                        <div class="col-md-6">
+                <div class="form-img">
                 </div>
+            </div>
                 <div class="col-md-6">
                     <form id="recall_form" method="POST" action="/add_recall/" class="form-horizontal" role="form">
                         {% csrf_token %}
                          <div class="form-group">
-                            <label for="{{ form.name.id_for_label }}" class="col-sm-6 control-label">Имя</label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.name.id_for_label }}" class=" control-label">Имя</label>
                                 <p class="errors"> {{ form.name.errors }}</p>
                                 {{ form.name }}
                                 {% if form.name.help_text %}
                                     <p class="help">{{ form.name.help_text|safe }}</p>
                                 {% endif %}
                             </div>
-                        </div>
                         <div class="form-group">
-                            <label for="{{ form.email.id_for_label }}l" class="col-sm-6 control-label">E-mail</label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.email.id_for_label }}l" class="control-label">E-mail</label>
                                 <p class="errors">{{ form.email.errors }}</p>
                                 {{ form.email }}
                                 {% if form.email.help_text %}
                                     <p class="help">{{ form.email.help_text|safe }}</p>
                                 {% endif %}
-                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="{{ form.type_photo.id_for_label }}" class="col-sm-6 control-label">Какая съемка Вас интересует?</label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.type_photo.id_for_label }}" class="control-label">Какая съемка Вас интересует?</label>
                                 <p class="errors">{{ form.type_photo.errors }}</p>
                                 {{ form.type_photo }}
                                 {% if form.type_photo.help_text %}
                                     <p class="help">{{ form.type_photo.help_text|safe }}</p>
                                 {% endif %}
-                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="{{ form.date_photo_shooting.id_for_label }}" class="col-sm-6 control-label">Планируемая дата съемки </label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.date_photo_shooting.id_for_label }}" class=" control-label">Планируемая дата съемки </label>
                                 <p class="errors">{{ form.date_photo_shooting.errors }}</p>
                                 {{ form.date_photo_shooting }}
                                 {% if form.date_photo_shooting.help_text %}
                                     <p class="help">{{ form.date_photo_shooting.help_text|safe }}</p>
                                 {% endif %}
-                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="{{ form.location.id_for_label }}" class="col-sm-6 control-label">Планируемое место съемки </label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.location.id_for_label }}" class=" control-label">Планируемое место съемки </label>
                                 <p class="errors">{{ form.location.errors }}</p>
                                 {{ form.location }}
                                 {% if form.location.help_text %}
                                     <p class="help">{{ form.location.help_text|safe }}</p>
                                 {% endif %}
-                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="{{ form.massage.id_for_label }}" class="col-sm-6 control-label">Сообщение</label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.massage.id_for_label }}" class=" control-label">Сообщение</label>
                                 <p class="errors">{{ form.massage.errors }}</p>
                                 {{ form.massage }}
                                 {% if form.massage.help_text %}
                                     <p class="help">{{ form.massage.help_text|safe }}</p>
                                 {% endif %}
-                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="{{ form.social.id_for_label }}" class=" control-label">Cсылка на Вашу страницу в соц. сетях</label>
+                                <p class="errors">{{ form.social.errors }}</p>
+                                {{ form.social }}
+                                {% if form.social.help_text %}
+                                    <p class="help">{{ form.social.help_text|safe }}</p>
+                                {% endif %}
                         </div>
                         <div class="form-group">
-                            <label for="{{ form.info_about_my.id_for_label }}" class="col-sm-6 control-label">Как Вы обо мне узнали (Google, друзья, соц.сеть и т.д.)? *</label>
-                            <div class="col-sm-6">
+                            <label for="{{ form.info_about_my.id_for_label }}" class=" control-label">Как Вы обо мне узнали (Google, друзья, соц.сеть и т.д.)? *</label>
                                 <p class="errors">{{ form.info_about_my.errors }}</p>
                                 {{ form.info_about_my }}
                                 {% if form.info_about_my.help_text %}
                                     <p class="help">{{ form.info_about_my.help_text|safe }}</p>
                                 {% endif %}
                             </div>
-                        </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-6 col-sm-1">
-                                <button type="submit" class="btn btn-default">Отправить</button>
+                            <div class="">
+                                <button type="submit" class="btn btn-default btn-lg">Отправить</button>
                             </div>
                         </div>
                     </form>

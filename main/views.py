@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from mongoengine import DoesNotExist
-
 from main.models import Album, Foto, SliderPhoto
 from  main.forms import RecallForm
-from django.http import HttpResponse
+from main.Utilits.paginatorManager import PaginatorManager
+
 
 context_dict = {}
 foto_dict = {}
@@ -40,32 +39,23 @@ def albums(request, album_id):
     album = Album.objects.get(id=album_id)
     foto_dict['photos'] = Foto.objects.filter(album= album)
     foto_dict['album_info'] = album
-
-    try:
-        foto_dict['next'] = Album.objects.get(id=album_id).get_next_by_data().id
-    except Exception:
-        foto_dict['next']= 0
-
-    try:
-        foto_dict['previous'] = Album.objects.get(id=album_id).get_previous_by_data().id
-    except Exception:
-        foto_dict['previous'] = 0
-
+    pm = PaginatorManager()
+    foto_dict['next'] = pm.next(Album, album_id)
+    foto_dict['previous'] = pm.previous(Album, album_id)
     return render(request, 'main/albums.html', foto_dict)
 
 def add_recall(request):
     if request.method == 'POST':
         form = RecallForm(request.POST)
-
         if form.is_valid():
             form.save()
-            return HttpResponse('ok')
-        else:
-            return HttpResponse('not ok')
+            return render(request, 'main/form_valid_ok.html')
     else:
         form = RecallForm()
-
     return render(request, 'main/add_recall.html', {'form' : form})
+
+def form_valid_ok(request):
+    return render(request, 'main/form_valid_ok.html')
 
 def price_wedding(request):
     return render(request, 'main/price-wedding.html')
@@ -73,10 +63,7 @@ def price_wedding(request):
 def price_portret(request):
     return render(request, 'main/price-portret.html')
 
-def nex_page(request):
-    album = Album.objects.get(id=album_id).get_next_by_data()
-    foto_dict['photos'] = Foto.objects.filter(album=album)
-    foto_dict['album_info'] = album
-    return render(request, 'main/albums.html', foto_dict)
+
+
 
 

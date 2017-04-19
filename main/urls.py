@@ -12,6 +12,7 @@ urlpatterns = [
         url(r'^FAQ/$', views.faq, name='faq'),
         url(r'^price/$', views.price, name='price'),
         url(r'^add_recall/$', views.add_recall, name='add_reall'),
+        url(r'^add_recall/ok$', views.form_valid_ok, name='add_form_ok'),
         url(r'^price-wedding/$', views.price_wedding, name='price-wedding'),
         url(r'^price-portret/$', views.price_portret, name='price-portret'),
         url(r'^categories/(?P<type_foto>[\w\-]+)/$', views.categories, name='categories'),
