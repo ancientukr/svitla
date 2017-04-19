@@ -40,8 +40,9 @@ class Foto(models.Model):
 
     def __str__ (self):
         return u'%s/%s' % (self.album.name, self.id)
-
+ # -*- coding: utf-8 -*-
 class Recall(models.Model):
+    # -*- coding: utf-8 -*-
     CATEGORIES_PHOTO_TYPE = (
         ("Wedding", "свадебная"),
         ("Pregnancy", "беременность"),
