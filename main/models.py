@@ -6,7 +6,7 @@ from django.db import models
 
 # -*- coding: utf-8 -*-
 class Album(models.Model):
-
+    # -*- coding: utf-8 -*-
     CATEGORIES_PHOTO_ALBUM = (
         ("Wedding", "Свадьба"),
         ("Portrait", "Портрет"),
