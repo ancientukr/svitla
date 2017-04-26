@@ -1,3 +1,9 @@
 
-h1 Django web site
+Django web site
 ==================
+Django, bootstrap, jquery
+-------------------------
+
+
+Example:
+<http://zef.pythonanywhere.com/>
