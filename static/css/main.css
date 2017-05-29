@@ -383,6 +383,10 @@ footer img {
     text-align: center;
     margin-top: 6em;
 }
+.price-category {
+    margin-bottom: 2em;
+    border: 1px solid;
+}
 .price-category1 {
     background: url("../../media/photo/МК_ПастухМ_2027.jpg") no-repeat 50% 50%;
     background-size: cover;

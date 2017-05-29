@@ -37,7 +37,7 @@ def categories(request, type_foto):
 
 def albums(request, album_id):
     album = Album.objects.get(id=album_id)
-    foto_dict['photos'] = Foto.objects.filter(album= album)
+    foto_dict['photos'] = Foto.objects.filter(album=album)
     foto_dict['album_info'] = album
     pm = PaginatorManager()
     foto_dict['next'] = pm.next(Album, album_id)

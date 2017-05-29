@@ -9,6 +9,7 @@ class PaginatorManager():
             return n
         else:
             self.next(Album, n)
+            
 
     def previous(self, Album, album_id):
         try:
